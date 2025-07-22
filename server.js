@@ -9,7 +9,9 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
+    'http://localhost:3001',
     'https://*.netlify.app',
+    'https://onlinestores4u.netlify.app',  // Add your actual Netlify URL
     process.env.FRONTEND_URL || 'https://your-app.netlify.app'
   ],
   credentials: true
@@ -53,5 +55,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
 
 
